@@ -1,0 +1,79 @@
+.case{
+
+    padding: 0 0 0 0;
+    height: 50px;
+    width:50px;
+    border:solid 1px black;
+    padding:2px;
+
+}
+
+.errorCase{
+  background-color: rgb(255, 113, 113);
+}
+
+::ng-deep.mat-select-arrow {
+  display: none;
+}
+
+mat-select{
+
+  background-color: rgba(177, 37, 37, 0); /*select transparent*/
+  border: none;
+  text-align: center;
+  font-family: Bodo ;
+
+}
+
+mat-select:hover{
+  background-color: rgb(221, 255, 255);
+}
+
+mat-option{
+
+  background-color: rgb(252, 252, 252);
+}
+
+mat-option:checked{
+  background:rgb(202, 202, 202)
+}
+
+/* bon jsp comment avoir une zone cliquable sur toute la zone j'abandonne */
+
+.select-tile {
+  /*aucune idée d'ou apparait ce truc backgroundcolor red est pas visible*/
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+.tile-error {
+  background-color: lightcoral;
+}
+
+
+.sudoku{
+  border: 3px solid black;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+.row3{
+  border-top:3px solid black;
+}
+
+.col3{
+  border-left:3px solid black;
+}
+
+.help-tile {
+  position: absolute;
+  color: gray;
+  user-select: none; /* makes it transparent to selection */
+  pointer-events: none; /* makes it transparent to selection */
+  overflow-wrap: break-word;
+  width: 55px;
+  font-size: small;
+}

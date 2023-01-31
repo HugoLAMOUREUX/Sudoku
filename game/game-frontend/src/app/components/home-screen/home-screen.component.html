@@ -1,0 +1,55 @@
+
+    <div class="bloc-menu">
+
+        <form [formGroup]="playerFormGroup" (ngSubmit)="onSubmit()">
+
+
+            <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Player name</mat-label>
+                <input matInput placeholder="Foo" formControlName="playerId">
+            </mat-form-field>
+
+            <div class="margins" >
+            <input type="checkbox" id="suggestions" formControlName="suggestions">
+            <label for="suggestions"> With suggestions (prevents recording the score)</label>
+            </div>
+
+            <div class="margins">
+            <p> Select a map to play or replay with:</p>
+
+            <div  class="bloc-grid-choice">
+
+                <div class="row-grid-choice">
+                    <div class="row-grid-left">
+                        <button type="submit" class="expanded">
+                            Generate random board
+                        </button>
+                    </div>
+
+                     <div class="row-grid-right">
+                        <select class="expanded" formControlName="difficulty">
+                            <option selected>easy</option>
+                            <option>medium</option>
+                            <option>hard</option>
+                            <option>very-hard</option>
+                            <option>insane</option>
+                            <option>inhuman</option>
+                        </select>
+                     </div>
+                </div>
+
+                <p class="subtext"> Or launch an already existing grid</p>
+
+                <div class="test">
+                <div *ngFor="let x of this.gridsData; let i =index" class="inline-image image ">
+                  <img width="240" height="240" [src]="this.gridsSnapShots[i].src "  (click)="launchExistingGrid(i)" *ngIf="this.gridsSnapShots[i].src">
+              </div>
+            </div>
+            </div>
+            </div>
+
+        </form>
+    </div>
+
+
+

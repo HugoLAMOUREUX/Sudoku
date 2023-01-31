@@ -1,0 +1,46 @@
+<div class="board" (click)="setRankingFalse()">
+
+<div class="left-container" >
+
+
+        <io-tree-history style="height: 80%" [style.width]="'35%'" [svgIconSize]="200" [rootRenderer]="rootRenderer()">
+        </io-tree-history>
+
+
+</div>
+
+<div class="board-container">
+<div class="gameEnded-container" *ngIf="this.gameEnded">
+    <app-game-ended-menu></app-game-ended-menu>
+</div>
+
+<div class="ranking-container" *ngIf="showRanking" (click)="$event.stopPropagation()">
+    <app-ranking></app-ranking>
+</div>
+
+
+
+<div class="middle-container" >
+  <app-global-grid ></app-global-grid>
+  </div>
+
+<div class="right-container" >
+
+    <div class="ranking" (click)="$event.stopPropagation();changeShowRanking()">
+        <img src="../assets/ranking.svg" alt="ranking" width="50px">
+    </div>
+    <div class="nameForm" >
+
+    <mat-form-field class="example-full-width police-bobo" appearance="fill">
+        <mat-label>Joueur</mat-label>
+        <input matInput value="{{this.name}}" (keyup)="updateName($event)">
+      </mat-form-field>
+
+    </div>
+
+    <br>
+    <p>Coups:{{this.score}}</p>
+
+</div>
+</div>
+</div>

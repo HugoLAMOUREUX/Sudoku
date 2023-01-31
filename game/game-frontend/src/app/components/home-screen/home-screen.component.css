@@ -1,0 +1,72 @@
+.inline-image {
+  display: inline-block;
+
+}
+
+.test{
+  width:840px;
+  margin:0 auto;
+}
+
+.image {
+  cursor:pointer;
+  margin: 10px;
+  width:240px;
+  background-color: lightgrey;
+  padding:10px;
+  border-radius: 5px;
+}
+
+.bloc-menu{
+    width:900px;
+    background-color: rgb(255, 255, 255);
+    margin: 0 auto;
+    padding: 30px;
+}
+
+
+.bloc-grid-choice{
+    width:900px;
+    border: solid black;
+}
+
+.row-grid-choice{
+    margin: 10px 0px ;
+    height:40px;
+    background-color:grey;
+}
+
+.row-grid-left{
+    width: 70%;
+    height:100%;
+    float:left;
+}
+
+.row-grid-right{
+    width: 30%;
+    height:100%;
+    float:right;
+}
+
+
+.subtext{
+    color:rgb(151, 151, 151);
+    text-align: center;
+    padding-top: 10px;
+}
+
+
+.form-field-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+
+   mat-form-field {
+     width:100%;
+  }
+
+  .margins{
+    margin-top:10px;margin-bottom: 10px;
+  }

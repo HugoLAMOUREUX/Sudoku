@@ -1,0 +1,15 @@
+{
+  "/game/*": {
+    "target": "http://localhost:4445",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true,
+    "pathRewrite": { "^/proxy": "" }
+  },
+  "/sudoku-provider/*": {
+    "target": "https://sudoku.diverse-team.fr/",
+    "secure": false,
+    "logLevel": "debug",
+    "changeOrigin": true
+  }
+}

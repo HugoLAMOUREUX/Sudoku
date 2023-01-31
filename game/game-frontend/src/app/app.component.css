@@ -1,0 +1,10 @@
+@font-face {
+  font-family: Bodo;
+  src: url("../assets/BodoAmat.ttf");
+}
+
+* {
+  font-family: Bodo !important;
+}
+
+/* bodo ne marche plus partout...pk */

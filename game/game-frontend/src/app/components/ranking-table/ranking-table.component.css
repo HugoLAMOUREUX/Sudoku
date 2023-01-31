@@ -1,0 +1,9 @@
+.mat-sort-header-container {
+    align-items: center;
+  }
+.white{
+    background-color:white;
+}
+.grey{
+    background-color: rgba(180, 178, 178, 0.639);
+}

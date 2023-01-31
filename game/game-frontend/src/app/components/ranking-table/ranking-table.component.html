@@ -1,0 +1,13 @@
+<table matSort (matSortChange)="sortData($event)">
+    <tr class="white">
+      <th mat-sort-header="rank">Rank</th>
+      <th mat-sort-header="name">Name</th>
+      <th mat-sort-header="score">Score</th>
+    </tr>
+
+    <tr *ngFor="let rank of sortedData" [ngClass]="{'white':getRank(rank.score)%2==0, 'grey':getRank(rank.score)%2==1}">
+      <td>{{getRank(rank.score)}}</td>
+      <td>{{rank.name}}</td>
+      <td>{{rank.score}}</td>
+    </tr>
+  </table>

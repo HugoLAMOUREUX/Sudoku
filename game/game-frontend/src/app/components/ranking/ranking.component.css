@@ -1,0 +1,11 @@
+.rankingMenu{
+    position: absolute;
+    font-family: Bodo ;
+    background-color: lightgray;
+    padding : 30px 150px 30px 150px;
+    top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999 !important;
+  text-align: center;
+}

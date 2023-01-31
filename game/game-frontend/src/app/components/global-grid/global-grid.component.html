@@ -1,0 +1,24 @@
+<table class="sudoku">
+    <tr *ngFor="let row of [0,1,2,3,4,5,6,7,8] ">
+      <!-- lignes -->
+
+         <td  class="case" [ngClass]="{'row3':row%3 == 0, 'col3':col%3==0,'tile-error':!gridBooleanValues[9*row+col] }"
+         *ngFor="let col of [0,1,2,3,4,5,6,7,8]">
+          <!-- colonnes -->
+
+          <app-suggestions class="help-tile" *ngIf="showSuggestions" [suggestion]="gridSuggestions[9*row+col]"></app-suggestions>
+
+          <mat-select disableOptionCentering
+                      panelClass="select-tile"
+                      [value]="values[9*row+col]"
+                      [ioMatSelect]
+                      (matSelectBinder)="setValue($event,9*row+col)"
+                      [ioClick]
+                      (clickBinder)="directSet($event,9*row+col)">
+
+            <mat-option  *ngFor="let number of [1,2,3,4,5,6,7,8,9]" [value]="number">{{number}}</mat-option>
+          </mat-select>
+
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,4 @@
+- GET /game/grids/allGrids => JSON instance of a list of class MapModelDTO (containing all the grids) with code OK (or code NOT_FOUND if does not exist)
+- GET /game/grids/{id}/gridHighScore => JSON instance of a Map<String,int>  with code OK (or code NOT_FOUND if does not exist)
+- GET /game/grids/{id}/gridData => JSON instance of the class MapModelDTO with code OK (or code NOT_FOUND if does not exist)
+- POST /game/grids/score => take a JSON instance of {values: int[81],"player":"hugo","score":15} in the body and return a code Created (or code Not Acceptable if the data provided isn't correct)
