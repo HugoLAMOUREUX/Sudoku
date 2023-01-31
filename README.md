@@ -1,5 +1,7 @@
 # CPOO2 Project - Selim Gmati, Hugo Lamoureux
 
+This is a copy from my gitlab repository
+
 ## Project's description
 Sudoku game. A player can generate and play a random new grid or play an already existant grid. He can see his score and the topScores. He can also undo and redo his moves thanks to the history board.
 
